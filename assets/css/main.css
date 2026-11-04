@@ -1958,3 +1958,49 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/*--------------------------------------------------------------
+# Language Switcher
+--------------------------------------------------------------*/
+.header .lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-right: 15px;
+  font-family: var(--nav-font);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.header .lang-switch a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.header .lang-switch a:hover {
+  color: var(--accent-color);
+}
+
+.header .lang-switch a.active {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+}
+
+.header .lang-switch .sep {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+@media (max-width: 1200px) {
+  .header .lang-switch {
+    order: 2;
+    padding-right: 10px;
+  }
+}
+
+/* Traditional Chinese typography */
+html:lang(zh-Hant-TW) {
+  --default-font: "Roboto", "Noto Sans TC", system-ui, -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --heading-font: "Questrial", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --nav-font: "Noto Sans", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
